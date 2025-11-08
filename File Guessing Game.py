@@ -5,7 +5,7 @@ print("Logan's Number Guessing Game\n"
       "You have 10 attempts to guess the number.\n"
       "Let's get started!")
 
-random_Number = random.randint(1, 100)
+random_number = random.randint(1, 100)
 Attempts = 10
 last_Guess = None
 Attempts_left = Attempts
@@ -21,13 +21,13 @@ while Attempts > 0:
     if Guess < 1 or Guess > 100:
         print("Your guess is out of bounds. Please choose a number between 1 and 100.")
         continue
-    if Guess == random_Number:
+    if Guess == random_number:
         print("You won Logan's Guessing Game!")
         break
     elif Guess in Past_Guesses:
         print("You've already guessed that number. Try a different one.")
         continue
-    elif Guess < random_Number:
+    elif Guess < random_number:
         last_Guess = Guess
         Attempts_left -= 1
         print(f"You have {Attempts_left} attempts left.")
@@ -44,5 +44,5 @@ while Attempts > 0:
     Attempts -= 1
 
 if Attempts == 0:
-    print(f"Sorry, you've run out of attempts. The number was {random_Number}.")
-    print(f"You have {Attempts_left} attempts left.")
+    print(f"Sorry, you've run out of attempts. The number was {random_number}.")
+    print("Game Over!")
